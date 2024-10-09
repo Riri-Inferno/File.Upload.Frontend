@@ -1,11 +1,11 @@
-function hello(name:any) {
-    'Hello World'
-  }
-  
+function hello(name: DKILL) {
+  'Hello World';
+}
 
+export type DKILL = {
+  id: number;
+  da: string | null;
+};
+const hoge: DKILL = { id: 1, da: '' };
 
-
-
-
-  
-  hello('test')
+hello(hoge);
