@@ -1,15 +1,15 @@
-import globals from "globals";
-import jsPlugin from "@eslint/js";
-import vuePlugin from "eslint-plugin-vue";
-import tsPlugin from "@typescript-eslint/eslint-plugin";
-import tsParser from "@typescript-eslint/parser";
-import eslintConfigPrettier from "eslint-config-prettier";
-import prettierPlugin from "eslint-plugin-prettier";
+import globals from 'globals';
+import jsPlugin from '@eslint/js';
+import vuePlugin from 'eslint-plugin-vue';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   {
     // 対象ファイルの指定
-    files: ["**/*.{js,mjs,cjs,ts,vue}"],
+    files: ['**/*.{js,mjs,cjs,ts,vue}'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -22,8 +22,8 @@ export default [
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
-      'vue': vuePlugin,
-      'prettier': prettierPlugin,
+      vue: vuePlugin,
+      prettier: prettierPlugin,
     },
     rules: {
       ...jsPlugin.configs.recommended.rules,
